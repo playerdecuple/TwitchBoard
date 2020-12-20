@@ -29,16 +29,21 @@ public class TwitchBoardMain {
         twirk.addIrcListener(new TwitchListener());
         connect(twirk);
 
-        System.out.println("커넥트 완료 : streamer - " + streamer.getStreamer() + " / oauth - " + streamer.getOauthKey() + " /");
-
     }
 
     public static void connect(Twirk twirk) throws IOException, InterruptedException {
         try {
             twirk.connect();
+            okay();
         } catch (SocketException e) {
             System.out.println("[오류] 트위치에 연결하는 데 실패했습니다. 재연결을 시도합니다.");
+            connect(twirk);
         }
+    }
+
+    public static void okay() {
+        Streamer streamer = loadStreamer();
+        System.out.println("커넥트 완료 : streamer - " + streamer.getStreamer() + " / oauth - " + streamer.getOauthKey() + " /");
     }
 
 }
