@@ -62,7 +62,7 @@ public class TwitchListener implements TwirkListener {
     private int getKeyboardVoteResult() {
 
         if (verbose()) {
-            System.out.println("조회 완료 : [KEY] " + (char) (getArrayIndexOfMaxValue(keyboardVotes)) + "(" + getArrayIndexOfMaxValue(keyboardVotes) + "), [VOTES] " + getMaxValue(keyboardVotes));
+            System.out.println("조회 완료 : [KEY] " + String.valueOf((char) (getArrayIndexOfMaxValue(keyboardVotes))).replace("\n", "LF") + "(" + getArrayIndexOfMaxValue(keyboardVotes) + "), [VOTES] " + getMaxValue(keyboardVotes));
         }
 
         return getArrayIndexOfMaxValue(keyboardVotes);
