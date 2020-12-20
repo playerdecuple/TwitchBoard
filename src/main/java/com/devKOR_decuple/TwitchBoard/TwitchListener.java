@@ -101,53 +101,6 @@ public class TwitchListener implements TwirkListener {
 
     }
 
-    private int getKeyType(int indexNum) {
-
-        /*
-         * StreamerKey| Array Index          | Type    | ChatKey
-         * ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ [ Basic ]
-         * A ~ Z      : Array Index 0 ~ 25   : Type 0  : A ~ Z
-         * 0 ~ 9      : Array Index 26 ~ 35  : Type 1  : 0 ~ 9
-         * F1 ~ F12   : Array Index 36 ~ 48  : Type 2  : F1 ~ F12
-         * Ins ~ PgDn : Array Index 49 ~ 55  : Type 3  : Ins ~ PgDn
-         * ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ [ Utility ]
-         * Escape     : Array Index 56       : Type 4  : Esc
-         * Tab        : Array Index 57       : Type 5  : Tab
-         * LShift     : Array Index 58       : Type 6  : LS, LShift, Shift
-         * LCtrl      : Array Index 59       : Type 7  : LC, LCtrl
-         * LAlt       : Array Index 60       : Type 8  : LA, LAlt
-         * Space bar  : Array Index 61       : Type 9  : SP, SpaceBar
-         * BackSpace  : Array Index 62       : Type 10 : BS, BackSpace
-         * Return     : Array Index 63       : Type 11 : Return, Enter, RT, EN
-         * RShift     : Array Index 64       : Type 12 : RS, RShift
-         * RCtrl      : Array Index 65       : Type 13 : RC, RCtrl
-         * RAlt       : Array Index 66       : Type 14 : RA, RAlt
-         * Arrow Key  : Array Index 67 ~ 71  : Type 15 : <, +, _, >
-         * Mouse      : Array Index 72 ~ 76  : Type 16 : <<, ++, __, >>
-         */
-
-        if (indexNum >= 0 && indexNum <= 25) return 0; // Alphabet
-        if (indexNum >= 26 && indexNum <= 35) return 1; // Number
-        if (indexNum >= 36 && indexNum <= 48) return 2; // Function Key
-        if (indexNum >= 49 && indexNum <= 55) return 3; // Navigation Key(Except Arrow Key)
-        if (indexNum == 56) return 4; // Escape key
-        if (indexNum == 57) return 5; // Tab Key
-        if (indexNum == 58) return 6; // LS
-        if (indexNum == 59) return 7; // LC
-        if (indexNum == 60) return 8; // LA
-        if (indexNum == 61) return 9; // SP
-        if (indexNum == 62) return 10; // BS
-        if (indexNum == 63) return 11; // RT
-        if (indexNum == 64) return 12; // RS
-        if (indexNum == 65) return 13; // RC
-        if (indexNum == 66) return 14; // RA
-        if (indexNum >= 67 && indexNum <= 71) return 15; // Arrow Keys
-        if (indexNum >= 72 && indexNum <= 76) return 16; // Mouse
-
-        return -1;
-
-    }
-
     @Override
     public void onPrivMsg(TwitchUser sender, TwitchMessage message) {
 
