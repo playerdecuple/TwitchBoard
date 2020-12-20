@@ -13,6 +13,7 @@ import com.gikk.twirk.TwirkBuilder;
 import java.awt.*;
 import java.io.File;
 import java.io.IOException;
+import java.net.SocketException;
 
 import static com.devKOR_decuple.TwitchBoard.Core.ConfigurationHelper.loadStreamer;
 
@@ -24,12 +25,20 @@ public class TwitchBoardMain {
     public static void main(String[] args) throws AWTException, IOException, InterruptedException {
 
         Streamer streamer = loadStreamer();
-
-        System.out.println("커넥트 완료 : streamer - " + streamer.getStreamer() + " / oauth - " + streamer.getOauthKey() + " /");
         Twirk twirk = new TwirkBuilder(streamer.getStreamer(), "TwitchBoard", streamer.getOauthKey()).build();
         twirk.addIrcListener(new TwitchListener());
-        twirk.connect();
+        connect(twirk);
 
+        System.out.println("커넥트 완료 : streamer - " + streamer.getStreamer() + " / oauth - " + streamer.getOauthKey() + " /");
+
+    }
+
+    public static void connect(Twirk twirk) throws IOException, InterruptedException {
+        try {
+            twirk.connect();
+        } catch (SocketException e) {
+            System.out.println("[오류] 트위치에 연결하는 데 실패했습니다. 재연결을 시도합니다.");
+        }
     }
 
 }
