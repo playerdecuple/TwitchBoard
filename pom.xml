@@ -7,7 +7,7 @@
 
     <groupId>com.devKOR_decuple</groupId>
     <artifactId>TwitchBoard</artifactId>
-    <version>0.0.0</version>
+    <version>1.0.0-BETA</version>
     <build>
         <plugins>
             <plugin>
