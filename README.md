@@ -15,7 +15,21 @@
 2. IntelliJ IDEA에서 엽니다. 끝!
 
 ### 스트리머 (Streamer)
-> 아직 준비가 안 됐습니다. 조금만 기다려 주세요.
+1. [릴리즈 페이지](https://github.com/playerdecuple/TwitchBoard/releases/tag/1.0.0)로 이동한 다음 `Assets` 목록에서 `Source code (zip)`을 클릭하여 다운로드 받아 주세요.  
+2. 압축을 풀어 주세요.
+3. [OAuth 키 발급 페이지](https://twitchapps.com/tmi/)로 가셔서 `Connect`를 누른 다음 로그인 해 주시고, 얻은 `OAuth` 키를 보관해 주세요. (해킹 사이트가 아닙니다.)
+4. 압축이 풀려있는 폴더에서 `.config.txt`를 열어 주세요.
+5. 이상한 영어들이 많습니다. 아래와 같은 형식일 겁니다.
+```
+STREAMER,[# + 스트리머 트위치 ID],[OAUTH 키],0
+```
+6. 스트리머 트위치 ID는 자신의 트위치 링크 (`https://twitch.tv/xxxxxxxx`, 트위치 메인 -> 자신의 프로필 클릭 -> 채널 클릭하면 나오는 곳의 링크주소)에서 `xxxxxxx` 부분입니다.
+7. 형식대로 알맞게 수정해 줍니다. **중괄호는 넣지 마세요.** 아래는 예시입니다. 뒤에 `,0` 빼면 안 됩니다.
+```
+STREAMER,#playerdecuple,oauth:XXXXXXXXXXXXXXXXXXXX,0
+```
+8. 저장하고 나온 다음, 바로 해당 폴더에 있는 `실행.bat`을 더블클릭해서 엽니다. (바이러스나 랜섬웨어는 없습니다. 의심 되신다면 검사해 보세요.)
+9. 끝! 만약 재연결한다는 메시지가 주르륵 뜬다면 껐다가 다시 켜 보세요.
 
 ## 패치노트 (Patch Note)
 ### 0.0.0
