@@ -26,6 +26,16 @@ public class ConfigurationHelper {
         return Integer.parseInt(timer[1]);
 
     }
+    
+    public static int getKeyReleasingTime() {
+
+        String config = TwitchBoardMain.r.readString(TwitchBoardMain.file);
+        String timerInfo = config.split("\n")[4];
+        String[] timer = timerInfo.split(",");
+
+        return Integer.parseInt(timer[1]);
+
+    }
 
     public static boolean verbose() {
 
