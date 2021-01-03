@@ -36,6 +36,13 @@ public class TwitchListener implements TwirkListener {
                 int key = getKeyboardVoteResult();
 
                 robot.keyPress(key);
+
+                try {
+                    Thread.sleep(getKeyReleasingTime());
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+
                 robot.keyRelease(key);
 
                 userList = new ArrayList<>();
