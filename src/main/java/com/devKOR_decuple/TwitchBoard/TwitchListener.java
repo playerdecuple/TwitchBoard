@@ -133,7 +133,7 @@ public class TwitchListener implements TwirkListener {
          */
 
         // 넘락 해제해야 돼네 아 ㅡㅡ
-        // (It works when unlocked 'num lock'.)
+        // (It works when disabled 'num lock'.)
 
         String msg = message.getContent();
 
