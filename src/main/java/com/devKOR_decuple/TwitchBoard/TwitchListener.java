@@ -114,22 +114,22 @@ public class TwitchListener implements TwirkListener {
     public void onPrivMsg(TwitchUser sender, TwitchMessage message) {
 
         /*
-         * StreamerKey| Array Index          | Type    | ChatKey                  | Checked
+         * StreamerKey| Type    | ChatKey                  | Checked
          * ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ [ Basic ]
-         * A ~ Z      : Array Index 0 ~ 25   : Type 0  : A ~ Z                    : [x]
-         * 0 ~ 9      : Array Index 26 ~ 35  : Type 1  : 0 ~ 9                    : [x]
-         * Ins ~ PgDn : Array Index 49 ~ 55  : Type 3  : Ins ~ PgDn               : [x]
+         * A ~ Z      : Type 0  : A ~ Z                    : [x]
+         * 0 ~ 9      : Type 1  : 0 ~ 9                    : [x]
+         * Ins ~ PgDn : Type 3  : Ins ~ PgDn               : [x]
          * ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ [ Utility ]
-         * Escape     : Array Index 56       : Type 4  : Esc                      : [x]
-         * Tab        : Array Index 57       : Type 5  : Tab                      : [x]
-         * LShift     : Array Index 58       : Type 6  : SH, Shift                : [x]
-         * LCtrl      : Array Index 59       : Type 7  : CT, Ctrl                 : [x]
-         * LAlt       : Array Index 60       : Type 8  : AL, Alt                  : [x]
-         * Space bar  : Array Index 61       : Type 9  : SP, SpaceBar             : [x]
-         * BackSpace  : Array Index 62       : Type 10 : BS, BackSpace            : [x]
-         * Return     : Array Index 63       : Type 11 : Return, Enter, RT, EN    : [x]
-         * Arrow Key  : Array Index 64 ~ 68  : Type 15 : <, +, _, >               : [x]
-         * Mouse      : Array Index 69 ~ 73  : Type 16 : <<, ++, __, >>           : [x]
+         * Escape     : Type 4  : Esc                      : [x]
+         * Tab        : Type 5  : Tab                      : [x]
+         * LShift     : Type 6  : SH, Shift                : [x]
+         * LCtrl      : Type 7  : CT, Ctrl                 : [x]
+         * LAlt       : Type 8  : AL, Alt                  : [x]
+         * Space bar  : Type 9  : SP, SpaceBar             : [x]
+         * BackSpace  : Type 10 : BS, BackSpace            : [x]
+         * Return     : Type 11 : Return, Enter, RT, EN    : [x]
+         * Arrow Key  : Type 15 : <, +, _, >               : [x]
+         * Mouse      : Type 16 : <<, ++, __, >>           : [x]
          */
 
         // 넘락 해제해야 돼네 아 ㅡㅡ
