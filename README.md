@@ -42,7 +42,12 @@ A. `.config.txt`를 열고, 다음과 같이 수정합니다. 물론 대괄호�
 A. `.config.txt`를 열고, `LOGGING`과 `LOGGING_ALL`의 `TRUE`를 지우고 `FALSE`로 써 주세요.
 
 ## 패치노트 (Patch Note)
-### 1.0.0
+> 릴리즈된 버전은 뒤에 `*` 표기.
+
+### 1.0.1
+* 키를 누르고 있는 'Keydown' 기능 추가. 기본값은 1초
+
+### 1.0.0 *
 * Tab, Shift, Ctrl, Alt, Space, Return, Backspace 추가
 * Insert, Delete, Home, End, PageUp, PageDown 추가
 * 방향키 추가
